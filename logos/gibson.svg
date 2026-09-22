@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Gibson gold/black slanted logotype -->
+  <g transform="skewX(-10)">
+    <text x="20" y="52" font-family="'Arial Black', 'Trebuchet MS', sans-serif" font-weight="900" font-size="48" fill="#1E2A28" letter-spacing="-2">Gibson</text>
+    <circle cx="98" cy="18" r="5" fill="#E8871E"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- SHURE green/black bold logotype -->
+  <rect x="10" y="10" width="40" height="40" rx="8" fill="#0D2F2A"/>
+  <path d="M22 36c2.5 2 5.5 3 8 3 4 0 6-1.5 6-4 0-5.5-12-3-12-10 0-4 3.5-6.5 8.5-6.5 3 0 6 1 8 2.5l-1.8 3.5c-2-1.2-4.2-2-6.2-2-2.8 0-4.5 1.2-4.5 3 0 5 12 2.5 12 9.8 0 4.5-3.5 7.2-9.5 7.2-3.5 0-7-1.2-9.5-3.5L22 36z" fill="#25D366"/>
+  <text x="60" y="41" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="34" fill="#0D2F2A" letter-spacing="4">SHURE</text>
+</svg>

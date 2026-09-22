@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- D'Addario strings logotype -->
+  <circle cx="35" cy="30" r="18" fill="#1E2A28"/>
+  <circle cx="35" cy="30" r="9" fill="#FAF6EE"/>
+  <text x="65" y="39" font-family="'Arial Black', sans-serif" font-weight="800" font-size="26" fill="#1E2A28" letter-spacing="1">D'Addario</text>
+</svg>
