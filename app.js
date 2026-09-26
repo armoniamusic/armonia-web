@@ -8,6 +8,7 @@
 const WA_NUMERO = "50589379316"; // WhatsApp oficial (botón de la página de Facebook)
 const TELEFONO = "+505 8937 9316";
 const CORREO = "contacto@armonia.com";
+const SITE_URL = "https://armoniamusic.github.io/armonia-web"; // cambia al dominio propio
 
 // Redes sociales oficiales
 const FACEBOOK_URL = "https://www.facebook.com/armoniamusicleon";
@@ -18,6 +19,7 @@ const PRODUCTOS = [
     {
         id: 1,
         slug: "yamaha-c40",
+        precioUsd: 165,
         marca: "Yamaha",
         nombre: "Guitarra acústica C40",
         categoria: "Cuerdas",
@@ -36,6 +38,7 @@ const PRODUCTOS = [
     {
         id: 2,
         slug: "palmer-les-paul",
+        precioUsd: 220,
         marca: "Palmer",
         nombre: "Guitarra eléctrica estilo Les Paul",
         categoria: "Cuerdas",
@@ -54,6 +57,7 @@ const PRODUCTOS = [
     {
         id: 3,
         slug: "ibanez-gsr180",
+        precioUsd: 280,
         marca: "Ibanez",
         nombre: "Bajo eléctrico GSR180 de 4 cuerdas",
         categoria: "Cuerdas",
@@ -72,6 +76,7 @@ const PRODUCTOS = [
     {
         id: 4,
         slug: "ukelele-palmer",
+        precioUsd: 85,
         marca: "Palmer",
         nombre: "Ukelele soprano electroacústico",
         categoria: "Cuerdas",
@@ -90,6 +95,7 @@ const PRODUCTOS = [
     {
         id: 5,
         slug: "violin-latina",
+        precioUsd: 140,
         marca: "Latina",
         nombre: "Violín acústico 4/4",
         categoria: "Cuerdas",
@@ -108,6 +114,7 @@ const PRODUCTOS = [
     {
         id: 6,
         slug: "yamaha-psre273",
+        precioUsd: 195,
         marca: "Yamaha",
         nombre: "Teclado PSR-E273 de 5 octavas",
         categoria: "Teclas",
@@ -126,6 +133,7 @@ const PRODUCTOS = [
     {
         id: 7,
         slug: "bateria-shadow",
+        precioUsd: 420,
         marca: "Shadow Ranger",
         nombre: "Batería acústica de 5 piezas",
         categoria: "Percusión",
@@ -144,6 +152,7 @@ const PRODUCTOS = [
     {
         id: 8,
         slug: "congas-5d2",
+        precioUsd: 310,
         marca: "5D2",
         nombre: 'Set de congas premium 10" y 11" con stand',
         categoria: "Percusión",
@@ -162,6 +171,7 @@ const PRODUCTOS = [
     {
         id: 9,
         slug: "bongo-5d2",
+        precioUsd: 95,
         marca: "5D2",
         nombre: 'Set de bongó de madera 6.5" y 7.5"',
         categoria: "Percusión",
@@ -180,6 +190,7 @@ const PRODUCTOS = [
     {
         id: 10,
         slug: "timbales-maxtone",
+        precioUsd: 240,
         marca: "Maxtone",
         nombre: 'Set de timbales 13" y 14"',
         categoria: "Percusión",
@@ -198,6 +209,7 @@ const PRODUCTOS = [
     {
         id: 11,
         slug: "acordeon-latina",
+        precioUsd: 380,
         marca: "Latina",
         nombre: "Acordeón de 32 teclas y 32 bajos",
         categoria: "Viento",
@@ -216,6 +228,7 @@ const PRODUCTOS = [
     {
         id: 12,
         slug: "saxofon-alto",
+        precioUsd: 360,
         marca: "Lyonel",
         nombre: "Saxofón alto negro-dorado con estuche",
         categoria: "Viento",
@@ -234,6 +247,7 @@ const PRODUCTOS = [
     {
         id: 13,
         slug: "trompeta-lyonel",
+        precioUsd: 210,
         marca: "Lyonel",
         nombre: "Trompeta dorada en Si♭",
         categoria: "Viento",
@@ -252,6 +266,7 @@ const PRODUCTOS = [
     {
         id: 14,
         slug: "behringer-xm8500",
+        precioUsd: 45,
         marca: "Behringer",
         nombre: "Micrófono dinámico cardioide XM8500",
         categoria: "Audio",
@@ -270,6 +285,7 @@ const PRODUCTOS = [
     {
         id: 15,
         slug: "parlante-kohlt",
+        precioUsd: 280,
         marca: "Kohlt",
         nombre: 'Parlante activo 15" KMAS15A',
         categoria: "Audio",
@@ -288,6 +304,7 @@ const PRODUCTOS = [
     {
         id: 16,
         slug: "orange-crush12",
+        precioUsd: 129,
         marca: "Orange",
         nombre: "Amplificador de guitarra Crush 12",
         categoria: "Audio",
@@ -306,6 +323,7 @@ const PRODUCTOS = [
     {
         id: 17,
         slug: "fender-stratocaster",
+        precioUsd: 850,
         foto: "fotos/fender-stratocaster.jpg",
         marca: "Fender",
         nombre: "Guitarra eléctrica Stratocaster Player",
@@ -324,6 +342,7 @@ const PRODUCTOS = [
     {
         id: 18,
         slug: "shure-sm58",
+        precioUsd: 119,
         foto: "fotos/shure-sm58.jpg",
         marca: "Shure",
         nombre: "Micrófono vocal profesional SM58",
@@ -342,6 +361,7 @@ const PRODUCTOS = [
     {
         id: 19,
         slug: "boss-katana-50",
+        precioUsd: 320,
         foto: "fotos/boss-katana-50.jpg",
         marca: "Boss",
         nombre: "Amplificador de guitarra Katana-50 Gen 3",
@@ -360,6 +380,7 @@ const PRODUCTOS = [
     {
         id: 20,
         slug: "casio-cts300",
+        precioUsd: 175,
         foto: "fotos/casio-cts300.jpg",
         marca: "Casio",
         nombre: "Teclado sensitivo Casiotone CT-S300",
@@ -378,6 +399,7 @@ const PRODUCTOS = [
     {
         id: 21,
         slug: "marshall-mg15",
+        precioUsd: 119,
         foto: "fotos/marshall-mg15.jpg",
         marca: "Marshall",
         nombre: "Amplificador de guitarra MG15 Gold",
@@ -544,6 +566,17 @@ let marcaFiltro = "";
 let textoBusqueda = "";
 let soloDestacados = false;
 
+
+function formatoUsd(n) {
+    const num = Number(n);
+    if (!Number.isFinite(num)) return "";
+    return `$${num.toLocaleString("en-US")} USD`;
+}
+
+function precioReferencia(p) {
+    return Number.isFinite(Number(p && p.precioUsd)) ? Number(p.precioUsd) : null;
+}
+
 const FAMILIAS = () => ["Todos", ...new Set(PRODUCTOS.map((p) => p.categoria))];
 
 // Generador de enlaces seguros de WhatsApp
@@ -565,7 +598,7 @@ function productosVisibles() {
         if (!q) return true;
 
         const textoCompleto =
-            `${p.nombre} ${p.marca || ""} ${p.categoria} ${p.descripcion} ${p.specs ? Object.values(p.specs).join(" ") : ""}`.toLowerCase();
+            `${p.nombre} ${p.marca || ""} ${p.categoria} ${p.descripcion} ${p.precioUsd || ""} ${p.specs ? Object.values(p.specs).join(" ") : ""}`.toLowerCase();
         return textoCompleto.includes(q);
     });
 }
@@ -591,7 +624,8 @@ function productoCard(p) {
          <span class="sw-product-fallback-text">${p.categoria}</span>
        </div>`;
 
-    const waMsg = `Hola Armonía Music, deseo consultar disponibilidad y planes de apartado para: ${p.marca ? p.marca + " " : ""}${p.nombre}`;
+    const precioTxt = precioReferencia(p) != null ? ` (ref. ${formatoUsd(p.precioUsd)})` : "";
+    const waMsg = `Hola Armonía Music, deseo consultar disponibilidad y planes de apartado para: ${p.marca ? p.marca + " " : ""}${p.nombre}${precioTxt}`;
 
     return `
     <article class="sw-product" data-id="${p.id}">
@@ -605,6 +639,7 @@ function productoCard(p) {
           <span class="sw-product-cat-pill">${p.categoria}</span>
         </div>
         <h3 class="sw-product-name">${p.nombre}</h3>
+        ${precioReferencia(p) != null ? `<p class="sw-product-price">${formatoUsd(p.precioUsd)} <span>ref. en tienda</span></p>` : ""}
         <p class="sw-product-desc">${p.descripcion}</p>
         <div class="sw-product-foot">
           <button type="button" class="sw-btn-details" onclick="abrirModalProducto(${p.id})">Ver detalles</button>
@@ -887,7 +922,8 @@ window.abrirModalProducto = function (idOrSlug, actualizarHash = true) {
         ? `<img src="${p.foto}" alt="${p.nombre}" onerror="this.parentElement.innerHTML='<div class=\\'sw-product-fallback\\'><span class=\\'sw-product-fallback-icon\\'>${p.icono || "♫"}</span></div>'">`
         : `<div class="sw-product-fallback"><span class="sw-product-fallback-icon">${p.icono || "♫"}</span></div>`;
 
-    const waMsg = `Hola Armonía, me interesa consultar disponibilidad, métodos de pago y apartado para: ${p.marca ? p.marca + " " : ""}${p.nombre}`;
+    const precioTxt = precioReferencia(p) != null ? ` (precio de referencia ${formatoUsd(p.precioUsd)})` : "";
+    const waMsg = `Hola Armonía, me interesa consultar disponibilidad, métodos de pago y apartado para: ${p.marca ? p.marca + " " : ""}${p.nombre}${precioTxt}`;
 
     // Desglose de especificaciones estructuradas
     const specsHtml = p.specs
@@ -925,6 +961,7 @@ window.abrirModalProducto = function (idOrSlug, actualizarHash = true) {
           ${p.destacado ? '<span class="sw-product-feat-badge">★ Destacado</span>' : ""}
         </div>
         <h2 class="sw-modal-title" id="swModalTitle">${p.nombre}</h2>
+        ${precioReferencia(p) != null ? `<p class="sw-modal-price">${formatoUsd(p.precioUsd)} <span>precio de referencia · confirma en sucursal</span></p>` : ""}
         <p class="sw-modal-desc">${p.descripcion}</p>
 
         ${specsHtml}
@@ -936,6 +973,7 @@ window.abrirModalProducto = function (idOrSlug, actualizarHash = true) {
         </div>
 
         <div class="sw-modal-actions-row">
+          ${precioReferencia(p) != null ? `<button type="button" class="sw-btn-modal-share" onclick="simularApartadoProducto(${p.id})">Simular apartado</button>` : ""}
           <a class="sw-btn-modal-wa" href="${waLink(waMsg)}" target="_blank" rel="noopener">
             <svg class="sw-ico" aria-hidden="true"><use href="#i-wa"></use></svg>
             <span>Preguntar disponibilidad por WhatsApp</span>
@@ -972,6 +1010,23 @@ function cerrarModal() {
 }
 
 // Copiar enlace directo del producto al portapapeles
+
+window.simularApartadoProducto = function (id) {
+    const p = PRODUCTOS.find((item) => item.id == id);
+    const precio = precioReferencia(p);
+    cerrarModal();
+    const slider = document.getElementById("swSimSlider");
+    if (slider && precio != null) {
+        const min = Number(slider.min) || 60;
+        const max = Number(slider.max) || 1000;
+        slider.value = Math.min(max, Math.max(min, precio));
+        slider.dispatchEvent(new Event("input"));
+        document.querySelectorAll("[data-preset-price]").forEach((b) => b.classList.remove("is-active"));
+    }
+    const sec = document.getElementById("planes");
+    if (sec) sec.scrollIntoView({ behavior: "smooth" });
+};
+
 window.copiarEnlaceProducto = function (id) {
     const p = PRODUCTOS.find((item) => item.id == id);
     if (!p) return;

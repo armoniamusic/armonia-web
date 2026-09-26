@@ -772,6 +772,34 @@ a {
     color: var(--bg-deep);
 }
 
+
+.sw-product-price {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mango, #E8871E);
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+}
+.sw-product-price span,
+.sw-modal-price span {
+    display: inline-block;
+    margin-left: 6px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+}
+.sw-modal-price {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--mango, #E8871E);
+    margin: 0 0 12px;
+}
+
 .sw-product-name {
     font-size: 17px;
     font-weight: 700;
