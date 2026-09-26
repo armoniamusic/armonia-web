@@ -19,6 +19,12 @@
         return html.replace(/href="https:\/\/wa\.me\/[^"]+"/, 'href="' + wa + '"');
     };
     if (typeof sucursalCard === "function") sucursalCard = window.sucursalCard;
+    if (!document.querySelector('script[src*="catalog-lote.js"]')) {
+        var lote = document.createElement("script");
+        lote.src = "catalog-lote.js?v=3.1";
+        lote.defer = true;
+        (document.body || document.documentElement).appendChild(lote);
+    }
     document.addEventListener("DOMContentLoaded", function () {
         if (!document.querySelector('link[href*="impacto.css"]')) {
             var sheet = document.createElement("link");
@@ -48,9 +54,9 @@
                 var wrap = document.createElement("section"); wrap.className = "sw-vitrina";
                 wrap.innerHTML = '<div class="sw-vitrina-label">Pasillo · desliza como si estuvieras en León</div>';
                 var track = document.createElement("div"); track.className = "sw-vitrina-track";
-                PRODUCTOS.filter(function (p) { return p.imagen; }).forEach(function (p) {
+                PRODUCTOS.filter(function (p) { return p.imagen || p.foto; }).forEach(function (p) {
                     var a = document.createElement("a"); a.className = "sw-vitrina-item"; a.href = "#catalogo";
-                    a.innerHTML = '<img src="' + p.imagen + '" alt=""><strong>' + p.nombre + '</strong><span>' + (p.marca || "") + (p.precioUsd ? " · $" + p.precioUsd : "") + '</span>';
+                    a.innerHTML = '<img src="' + (p.imagen || p.foto) + '" alt=""><strong>' + p.nombre + '</strong><span>' + (p.marca || "") + (p.precioUsd ? " · $" + p.precioUsd : "") + '</span>';
                     track.appendChild(a);
                 });
                 wrap.appendChild(track); props.insertAdjacentElement("afterend", wrap);
