@@ -1,0 +1,291 @@
+/* Escaparate Armonía — capa de dirección de arte sobre estilos.css */
+
+:root {
+    --bg-main: #f4efe6;
+    --bg-alt: #ebe4d6;
+    --bg-card: #fbf7f0;
+    --bg-deep: #1a1410;
+    --bg-deeper: #100c0a;
+    --ink: #1c1612;
+    --ink-muted: #6a5e52;
+    --mango: #c45c26;
+    --mango-dark: #9a4418;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 6px;
+}
+
+body {
+    font-family: "Archivo", "Plus Jakarta Sans", sans-serif;
+    background: var(--bg-main);
+    background-image:
+        radial-gradient(rgba(28, 22, 18, 0.035) 0.7px, transparent 0.7px);
+    background-size: 18px 18px;
+}
+
+.sw-title,
+.sw-logo,
+.sw-hero h1,
+.sw-product-price,
+.sw-modal-price,
+.sw-modal-title,
+.sw-sim-amount {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+}
+
+/* Header más seco, menos “app” */
+.sw-header {
+    background: rgba(244, 239, 230, 0.94);
+    border-bottom: 1px solid rgba(28, 22, 18, 0.12);
+}
+.sw-logo-mark {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.sw-logo-icon {
+    border-radius: 2px;
+    background: #c45c26;
+}
+.sw-nav-link {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.sw-nav-link::after {
+    height: 1px;
+    background: #c45c26;
+}
+.sw-btn-nav {
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 12px;
+}
+
+/* Hero: foto de instrumento, no gradiente vacío */
+.sw-hero {
+    text-align: left;
+    padding: 0;
+    min-height: min(88vh, 760px);
+    display: flex;
+    align-items: flex-end;
+    background: #100c0a;
+}
+.sw-hero-glow {
+    display: none;
+}
+.sw-hero-stage {
+    position: absolute;
+    inset: 0;
+}
+.sw-hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% 40%;
+    filter: saturate(0.92) contrast(1.05);
+}
+.sw-hero-veil {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(16, 12, 10, 0.92) 0%, rgba(16, 12, 10, 0.55) 46%, rgba(16, 12, 10, 0.2) 100%),
+        linear-gradient(180deg, rgba(16, 12, 10, 0.2) 0%, rgba(16, 12, 10, 0.75) 100%);
+}
+.sw-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 72px 22px 56px;
+}
+.sw-hero-content {
+    max-width: 560px;
+}
+.sw-hero-kicker,
+.sw-hero-tag {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0 0 18px;
+    border-radius: 0;
+    color: #e8c9a8;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.sw-hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 0.95;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin: 0 0 22px;
+    color: #f6efe4;
+    font-variation-settings: "opsz" 80;
+}
+.sw-hero-text {
+    max-width: 42ch;
+    color: rgba(246, 239, 228, 0.78);
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+.sw-hero-actions {
+    justify-content: flex-start;
+    margin-bottom: 36px;
+}
+.sw-btn {
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    padding: 14px 22px;
+}
+.sw-btn-primary {
+    background: #c45c26;
+}
+.sw-btn-primary:hover {
+    background: #9a4418;
+    transform: none;
+    box-shadow: none;
+}
+.sw-btn-ghost {
+    border-color: rgba(246, 239, 228, 0.35);
+}
+.sw-btn-ghost:hover {
+    transform: none;
+}
+
+.sw-hero-floor {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sw-floor-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px 6px 6px;
+    background: rgba(16, 12, 10, 0.55);
+    border: 1px solid rgba(246, 239, 228, 0.18);
+    color: #f6efe4;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.sw-floor-item img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}
+
+/* Barra de hechos, no tarjetas con icono */
+.sw-props-strip {
+    background: #1a1410;
+    color: #e8d7c4;
+    border-bottom: 0;
+    padding: 16px 0;
+}
+.sw-props-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.sw-props-line b {
+    color: #c45c26;
+    font-family: "Fraunces", serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-right: 4px;
+}
+.sw-props-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #c45c26;
+}
+.sw-prop-card {
+    display: none;
+}
+
+.sw-eyebrow {
+    letter-spacing: 0.18em;
+    color: #c45c26;
+}
+.sw-title {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+/* Catálogo tipo vitrina */
+.sw-product {
+    background: #fbf7f0;
+    border: 1px solid rgba(28, 22, 18, 0.12);
+    border-radius: 0;
+}
+.sw-product:hover {
+    transform: none;
+    border-color: #c45c26;
+    box-shadow: 0 18px 40px rgba(16, 12, 10, 0.12);
+}
+.sw-product-media {
+    height: 260px;
+    background:
+        radial-gradient(circle at 50% 80%, rgba(196, 92, 38, 0.08), transparent 55%),
+        #efe8dc;
+    border-bottom-color: rgba(28, 22, 18, 0.08);
+    padding: 20px;
+}
+.sw-product-name {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+}
+.sw-product-price {
+    color: #c45c26;
+    font-size: 22px;
+}
+.sw-product-cat-pill,
+.sw-btn-details,
+.sw-btn-wa-card {
+    border-radius: 2px;
+}
+
+.sw-family {
+    border-radius: 2px;
+}
+
+@media (max-width: 800px) {
+    .sw-hero {
+        min-height: 92vh;
+        align-items: flex-end;
+    }
+    .sw-hero-photo {
+        object-position: 70% 30%;
+    }
+    .sw-hero-veil {
+        background:
+            linear-gradient(180deg, rgba(16, 12, 10, 0.15) 0%, rgba(16, 12, 10, 0.88) 58%, #100c0a 100%);
+    }
+    .sw-hero-inner {
+        padding-top: 40px;
+        padding-bottom: 36px;
+    }
+    .sw-hero h1 {
+        font-size: clamp(40px, 12vw, 58px);
+    }
+}

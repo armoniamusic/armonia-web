@@ -42,10 +42,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="estilos.css?v=1.3" />
+        <link rel="stylesheet" href="estilos.css?v=2.0" />
+        <link rel="stylesheet" href="escaparate.css?v=2.0" />
     </head>
     <body>
         <!-- Barra superior informativa -->
@@ -133,32 +134,29 @@
         <main>
             <!-- Portada Principal (Hero) -->
             <section id="inicio" class="sw-hero">
-                <div class="sw-hero-glow"></div>
+                <div class="sw-hero-stage" aria-hidden="true">
+                    <img
+                        class="sw-hero-photo"
+                        src="fotos/fender-stratocaster.jpg"
+                        alt=""
+                    />
+                    <div class="sw-hero-veil"></div>
+                </div>
                 <div class="sw-container sw-hero-inner">
                     <div class="sw-hero-content">
-                        <div class="sw-hero-tag">
-                            <span class="sw-hero-spark">✦</span>
-                            <span
-                                >Pasión & Equipamiento Musical en
-                                Nicaragua</span
-                            >
-                        </div>
-                        <h1>
-                            El sonido que te inspira, en manos de quienes
-                            entienden tu música.
-                        </h1>
+                        <p class="sw-hero-kicker">
+                            León · Chinandega · Managua · Estelí · Matagalpa ·
+                            Masaya
+                        </p>
+                        <h1>Entra, tócalo<br />y apártalo hoy.</h1>
                         <p class="sw-hero-text">
-                            Guitarras, percusión, teclados, viento y audio
-                            profesional. Te asesoramos como músicos: aparta tu
-                            instrumento favorito con una prima o llévalo a
-                            crédito en tu sucursal más cercana.
+                            Vitrina de instrumentos y audio en Nicaragua.
+                            Prima desde 20%, crédito en sucursal y asesoría
+                            de músico a músico — no de vendedor a cliente.
                         </p>
                         <div class="sw-hero-actions">
                             <a class="sw-btn sw-btn-primary" href="#catalogo">
-                                <span>Explorar catálogo</span>
-                                <svg class="sw-ico" aria-hidden="true">
-                                    <use href="#i-arrow-down"></use>
-                                </svg>
+                                <span>Ver lo que hay en piso</span>
                             </a>
                             <a
                                 class="sw-btn sw-btn-ghost"
@@ -170,7 +168,21 @@
                                 <svg class="sw-ico" aria-hidden="true">
                                     <use href="#i-wa"></use>
                                 </svg>
-                                <span>Consultar disponibilidad</span>
+                                <span>WhatsApp a León</span>
+                            </a>
+                        </div>
+                        <div class="sw-hero-floor">
+                            <a class="sw-floor-item" href="#catalogo">
+                                <img src="fotos/yamaha-c40.jpg" alt="" />
+                                <span>Yamaha C40</span>
+                            </a>
+                            <a class="sw-floor-item" href="#catalogo">
+                                <img src="fotos/boss-katana-50.jpg" alt="" />
+                                <span>Katana-50</span>
+                            </a>
+                            <a class="sw-floor-item" href="#catalogo">
+                                <img src="fotos/shure-sm58.jpg" alt="" />
+                                <span>SM58</span>
                             </a>
                         </div>
                     </div>
@@ -179,51 +191,16 @@
 
             <!-- Beneficios destacados -->
             <section class="sw-props-strip">
-                <div class="sw-container sw-props-grid">
-                    <div class="sw-prop-card">
-                        <div class="sw-prop-icon">
-                            <svg class="sw-ico-lg" aria-hidden="true">
-                                <use href="#i-tag"></use>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Sistema de Apartado</strong>
-                            <p>
-                                Reserva tu instrumento favorito con una prima
-                                mínima y fija el precio.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sw-prop-card">
-                        <div class="sw-prop-icon">
-                            <svg class="sw-ico-lg" aria-hidden="true">
-                                <use href="#i-percent"></use>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Facilidades de Crédito</strong>
-                            <p>
-                                Llévalo en cuotas programadas y accesibles que
-                                se ajustan a tu bolsillo.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="sw-prop-card">
-                        <div class="sw-prop-icon">
-                            <svg class="sw-ico-lg" aria-hidden="true">
-                                <use href="#i-shield"></use>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Asesoría de Músico a Músico</strong>
-                            <p>
-                                Recomendaciones honestas según tu nivel, estilo
-                                musical y presupuesto.
-                            </p>
-                        </div>
-                    </div>
+                <div class="sw-container sw-props-line">
+                    <span><b>20%</b> prima para apartar</span>
+                    <span class="sw-props-dot"></span>
+                    <span><b>6</b> sucursales</span>
+                    <span class="sw-props-dot"></span>
+                    <span>Se prueba en tienda</span>
+                    <span class="sw-props-dot"></span>
+                    <span>Garantía Armonía</span>
+                    <span class="sw-props-dot"></span>
+                    <span>WhatsApp el mismo día</span>
                 </div>
             </section>
 
@@ -231,13 +208,12 @@
             <section id="catalogo" class="sw-section sw-catalog-section">
                 <div class="sw-container">
                     <div class="sw-heading">
-                        <span class="sw-eyebrow">Vitrina de instrumentos</span>
-                        <h2 class="sw-title">Catálogo Destacado</h2>
+                        <span class="sw-eyebrow">En piso ahora</span>
+                        <h2 class="sw-title">Lo que puedes tocar esta semana</h2>
                         <p class="sw-subtitle">
-                            Explora una muestra de nuestro stock. Si buscas un
-                            modelo específico o cotización personalizada,
-                            consúltanos directamente por WhatsApp o visita tu
-                            sucursal.
+                            Muestra de stock. Precios de referencia: se confirman
+                            en sucursal. Si no ves tu modelo, escríbenos — casi
+                            siempre se consigue.
                         </p>
                     </div>
 
@@ -847,6 +823,6 @@
             </defs>
         </svg>
 
-        <script src="app.js?v=1.3"></script>
+        <script src="app.js?v=2.0"></script>
     </body>
 </html>
