@@ -28,7 +28,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         if (!document.querySelector('link[href*="impacto.css"]')) {
             var sheet = document.createElement("link");
-            sheet.rel = "stylesheet"; sheet.href = "impacto.css?v=2.4";
+            sheet.rel = "stylesheet"; sheet.href = "impacto.css?v=2.5";
             document.head.appendChild(sheet);
         }
         var kicker = document.querySelector(".sw-hero-kicker");
@@ -52,7 +52,7 @@
             var props = document.querySelector(".sw-props-strip");
             if (props) {
                 var wrap = document.createElement("section"); wrap.className = "sw-vitrina";
-                wrap.innerHTML = '<div class="sw-vitrina-label">Pasillo · desliza como si estuvieras en León</div>';
+                wrap.innerHTML = '<div class="sw-vitrina-label">Instrumentos en exhibición · Sucursal León</div>';
                 var track = document.createElement("div"); track.className = "sw-vitrina-track";
                 PRODUCTOS.filter(function (p) { return p.imagen || p.foto; }).forEach(function (p) {
                     var a = document.createElement("a"); a.className = "sw-vitrina-item"; a.href = "#catalogo";
