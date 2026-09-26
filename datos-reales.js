@@ -28,7 +28,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         if (!document.querySelector('link[href*="impacto.css"]')) {
             var sheet = document.createElement("link");
-            sheet.rel = "stylesheet"; sheet.href = "impacto.css?v=2.5";
+            sheet.rel = "stylesheet"; sheet.href = "impacto.css?v=2.6";
             document.head.appendChild(sheet);
         }
         var kicker = document.querySelector(".sw-hero-kicker");
@@ -52,11 +52,33 @@
             var props = document.querySelector(".sw-props-strip");
             if (props) {
                 var wrap = document.createElement("section"); wrap.className = "sw-vitrina";
-                wrap.innerHTML = '<div class="sw-vitrina-label">Instrumentos en exhibición · Sucursal León</div>';
+                wrap.innerHTML = '<div class="sw-vitrina-header"><span class="sw-vitrina-label">Instrumentos en exhibición · Sucursal León</span><span class="sw-vitrina-sub">Toca cualquier instrumento para ver detalles y plan de apartado</span></div>';
                 var track = document.createElement("div"); track.className = "sw-vitrina-track";
                 PRODUCTOS.filter(function (p) { return p.imagen || p.foto; }).forEach(function (p) {
-                    var a = document.createElement("a"); a.className = "sw-vitrina-item"; a.href = "#catalogo";
-                    a.innerHTML = '<img src="' + (p.imagen || p.foto) + '" alt=""><strong>' + p.nombre + '</strong><span>' + (p.marca || "") + (p.precioUsd ? " · $" + p.precioUsd : "") + '</span>';
+                    var a = document.createElement("a");
+                    a.className = "sw-vitrina-item";
+                    a.href = "#producto=" + (p.slug || p.id);
+                    a.setAttribute("role", "button");
+                    a.setAttribute("aria-label", "Ver detalles de " + p.nombre);
+                    a.onclick = function (e) {
+                        e.preventDefault();
+                        if (typeof window.abrirModalProducto === "function") {
+                            window.abrirModalProducto(p.id);
+                        }
+                    };
+                    var precioHtml = p.precioUsd ? '<span class="sw-vitrina-price">$' + p.precioUsd + ' <small>USD</small></span>' : '';
+                    a.innerHTML =
+                        '<div class="sw-vitrina-media">' +
+                            '<img src="' + (p.imagen || p.foto) + '" alt="' + p.nombre + '" loading="lazy">' +
+                            '<span class="sw-vitrina-badge">Ver ficha</span>' +
+                        '</div>' +
+                        '<div class="sw-vitrina-info">' +
+                            '<strong>' + p.nombre + '</strong>' +
+                            '<div class="sw-vitrina-meta">' +
+                                '<span class="sw-vitrina-brand">' + (p.marca || "Armonía") + '</span>' +
+                                precioHtml +
+                            '</div>' +
+                        '</div>';
                     track.appendChild(a);
                 });
                 wrap.appendChild(track); props.insertAdjacentElement("afterend", wrap);

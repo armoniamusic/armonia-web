@@ -1,12 +1,24 @@
-.sw-vitrina{background:#100c0a;color:#f6efe4;padding:28px 0 36px;border-top:1px solid rgba(246,239,228,.08)}
-.sw-vitrina-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#c45c26;padding:0 22px 14px}
-.sw-vitrina-track{display:flex;gap:14px;overflow-x:auto;padding:0 22px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.sw-vitrina-track::-webkit-scrollbar{height:4px}
-.sw-vitrina-track::-webkit-scrollbar-thumb{background:#c45c26}
-.sw-vitrina-item{flex:0 0 210px;scroll-snap-align:start;background:#1a1410;border:1px solid rgba(246,239,228,.12);color:inherit;padding:10px 10px 14px}
-.sw-vitrina-item img{width:100%;height:160px;object-fit:contain;background:#ebe3d4;mix-blend-mode:multiply}
-.sw-vitrina-item strong{display:block;margin-top:10px;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16px}
-.sw-vitrina-item span{font-size:12px;color:#c45c26}
+.sw-vitrina{background:#123F38;color:#FAF6EE;padding:30px 0 34px;border-top:1px solid rgba(246,239,228,.14);border-bottom:1px solid rgba(18,63,56,.25)}
+.sw-vitrina-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;padding:0 24px 14px;max-width:1200px;margin:0 auto}
+.sw-vitrina-label{font-family:"Space Grotesk",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E8871E}
+.sw-vitrina-sub{font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;color:rgba(250,246,238,.75)}
+.sw-vitrina-track{display:flex;gap:14px;overflow-x:auto;padding:4px 24px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.sw-vitrina-track::-webkit-scrollbar{height:6px}
+.sw-vitrina-track::-webkit-scrollbar-track{background:rgba(13,47,42,.6);border-radius:3px}
+.sw-vitrina-track::-webkit-scrollbar-thumb{background:#E8871E;border-radius:3px}
+.sw-vitrina-item{flex:0 0 220px;scroll-snap-align:start;background:#FFFFFF;border-radius:12px;border:1px solid rgba(255,255,255,.2);box-shadow:0 8px 22px rgba(13,47,42,.22);color:#1E2A28;text-decoration:none;display:flex;flex-direction:column;overflow:hidden;cursor:pointer;transition:transform .22s cubic-bezier(.16,1,.3,1),box-shadow .22s ease}
+.sw-vitrina-item:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(0,0,0,.3)}
+.sw-vitrina-media{position:relative;height:160px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid rgba(18,63,56,.08)}
+.sw-vitrina-media img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .25s ease}
+.sw-vitrina-item:hover .sw-vitrina-media img{transform:scale(1.06)}
+.sw-vitrina-badge{position:absolute;top:8px;right:8px;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#123F38;background:rgba(243,237,225,.95);padding:2px 7px;border-radius:999px;border:1px solid rgba(18,63,56,.14);opacity:.85;transition:all .2s ease}
+.sw-vitrina-item:hover .sw-vitrina-badge{background:#E8871E;color:#FFFFFF;border-color:#E8871E;opacity:1}
+.sw-vitrina-info{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1;justify-content:space-between;gap:8px;background:#FAF8F5}
+.sw-vitrina-info strong{font-family:"Fraunces",Georgia,serif;font-size:14.5px;font-weight:600;line-height:1.25;color:#123F38;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sw-vitrina-meta{display:flex;align-items:baseline;justify-content:space-between;gap:6px;padding-top:4px;border-top:1px dashed rgba(18,63,56,.12)}
+.sw-vitrina-brand{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5C6B66}
+.sw-vitrina-price{font-family:"Space Grotesk",sans-serif;font-size:15px;font-weight:700;color:#C96F10}
+.sw-vitrina-price small{font-size:10px;font-weight:600;color:#8A968F}
 .sw-product-media{position:relative}
 .sw-product-media::after{content:"EN PISO · LEÓN";position:absolute;left:10px;bottom:10px;z-index:4;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#123F38;background:rgba(255,255,255,.94);padding:3px 8px;border-radius:4px;border:1px solid rgba(18,63,56,.18);box-shadow:0 1px 4px rgba(0,0,0,.08);line-height:1.3;white-space:nowrap;pointer-events:none}
 @media (min-width:900px){
