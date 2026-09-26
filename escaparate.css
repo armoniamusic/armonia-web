@@ -1,4 +1,4 @@
-/* Escaparate Armonía — capa de dirección de arte sobre estilos.css */
+/* Escaparate Armonía v2.1 — capa de dirección de arte */
 
 :root {
     --bg-main: #f4efe6;
@@ -34,7 +34,6 @@ body {
     font-optical-sizing: auto;
 }
 
-/* Header más seco, menos “app” */
 .sw-header {
     background: rgba(244, 239, 230, 0.94);
     border-bottom: 1px solid rgba(28, 22, 18, 0.12);
@@ -64,9 +63,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-size: 12px;
+    white-space: nowrap;
 }
 
-/* Hero: foto de instrumento, no gradiente vacío */
 .sw-hero {
     text-align: left;
     padding: 0;
@@ -75,13 +74,8 @@ body {
     align-items: flex-end;
     background: #100c0a;
 }
-.sw-hero-glow {
-    display: none;
-}
-.sw-hero-stage {
-    position: absolute;
-    inset: 0;
-}
+.sw-hero-glow { display: none; }
+.sw-hero-stage { position: absolute; inset: 0; }
 .sw-hero-photo {
     width: 100%;
     height: 100%;
@@ -103,9 +97,7 @@ body {
     margin: 0 auto;
     padding: 72px 22px 56px;
 }
-.sw-hero-content {
-    max-width: 560px;
-}
+.sw-hero-content { max-width: 560px; }
 .sw-hero-kicker,
 .sw-hero-tag {
     display: block;
@@ -146,20 +138,14 @@ body {
     font-size: 13px;
     padding: 14px 22px;
 }
-.sw-btn-primary {
-    background: #c45c26;
-}
+.sw-btn-primary { background: #c45c26; }
 .sw-btn-primary:hover {
     background: #9a4418;
     transform: none;
     box-shadow: none;
 }
-.sw-btn-ghost {
-    border-color: rgba(246, 239, 228, 0.35);
-}
-.sw-btn-ghost:hover {
-    transform: none;
-}
+.sw-btn-ghost { border-color: rgba(246, 239, 228, 0.35); }
+.sw-btn-ghost:hover { transform: none; }
 
 .sw-hero-floor {
     display: flex;
@@ -184,7 +170,6 @@ body {
     object-fit: cover;
 }
 
-/* Barra de hechos, no tarjetas con icono */
 .sw-props-strip {
     background: #1a1410;
     color: #e8d7c4;
@@ -216,9 +201,7 @@ body {
     border-radius: 50%;
     background: #c45c26;
 }
-.sw-prop-card {
-    display: none;
-}
+.sw-prop-card { display: none; }
 
 .sw-eyebrow {
     letter-spacing: 0.18em;
@@ -230,9 +213,8 @@ body {
     line-height: 1.05;
 }
 
-/* Catálogo tipo vitrina */
 .sw-product {
-    background: #fbf7f0;
+    background: #f4efe6;
     border: 1px solid rgba(28, 22, 18, 0.12);
     border-radius: 0;
 }
@@ -243,11 +225,19 @@ body {
 }
 .sw-product-media {
     height: 260px;
-    background:
-        radial-gradient(circle at 50% 80%, rgba(196, 92, 38, 0.08), transparent 55%),
-        #efe8dc;
-    border-bottom-color: rgba(28, 22, 18, 0.08);
-    padding: 20px;
+    background: #f4efe6 !important;
+    border-bottom: 0 !important;
+    padding: 12px 18px 0;
+}
+.sw-product-media img {
+    mix-blend-mode: multiply;
+    filter: contrast(1.04) saturate(0.96);
+}
+.sw-modal-media {
+    background: #f4efe6 !important;
+}
+.sw-modal-media img {
+    mix-blend-mode: multiply;
 }
 .sw-product-name {
     font-family: "Fraunces", Georgia, serif;
@@ -264,19 +254,14 @@ body {
 .sw-btn-wa-card {
     border-radius: 2px;
 }
-
-.sw-family {
-    border-radius: 2px;
-}
+.sw-family { border-radius: 2px; }
 
 @media (max-width: 800px) {
     .sw-hero {
         min-height: 92vh;
         align-items: flex-end;
     }
-    .sw-hero-photo {
-        object-position: 70% 30%;
-    }
+    .sw-hero-photo { object-position: 70% 30%; }
     .sw-hero-veil {
         background:
             linear-gradient(180deg, rgba(16, 12, 10, 0.15) 0%, rgba(16, 12, 10, 0.88) 58%, #100c0a 100%);
@@ -285,7 +270,5 @@ body {
         padding-top: 40px;
         padding-bottom: 36px;
     }
-    .sw-hero h1 {
-        font-size: clamp(40px, 12vw, 58px);
-    }
+    .sw-hero h1 { font-size: clamp(40px, 12vw, 58px); }
 }
