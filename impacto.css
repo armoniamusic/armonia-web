@@ -17,3 +17,4 @@
 .sw-bandas{background:#f4efe6;padding:56px 0;border-top:1px solid rgba(28,22,18,.12)}
 .sw-bandas .sw-title{max-width:18ch;margin:8px 0 12px}
 .sw-btn-nav{white-space:nowrap}
+.sw-brands img,.sw-brand img{mix-blend-mode:multiply;object-fit:contain;max-height:42px}
