@@ -21,7 +21,7 @@
     if (typeof sucursalCard === "function") sucursalCard = window.sucursalCard;
     if (!document.querySelector('script[src*="catalog-lote.js"]')) {
         var lote = document.createElement("script");
-        lote.src = "catalog-lote.js?v=3.1";
+        lote.src = "catalog-lote.js?v=4.0";
         lote.defer = true;
         (document.body || document.documentElement).appendChild(lote);
     }

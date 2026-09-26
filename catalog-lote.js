@@ -24,16 +24,16 @@
             },
         },
         {
-            id: 102,
-            slug: "shure-sm58-caja",
+            id: 18,
+            slug: "shure-sm58",
             precioUsd: 119,
             marca: "Shure",
-            nombre: "Micrófono vocal SM58",
+            nombre: "Micrófono vocal profesional SM58",
             categoria: "Audio",
             descripcion:
                 "El estándar de escenario. Cardioide dinámico, rejilla esférica y filtro anti-pop. Precio de referencia.",
             icono: "🎙️",
-            foto: "fotos/shure-sm58-caja.jpg",
+            foto: "fotos/shure-sm58.jpg",
             destacado: true,
             specs: {
                 material: "Dinámico cardioide",
@@ -274,7 +274,7 @@
             nombre: "Acordeón J.Meister rojo",
             categoria: "Viento",
             descripcion:
-                "Teclado piano, bajos tipo botón. Foto real de entrega. Precio de referencia.",
+                "Teclado piano, bajos tipo botón. Acabado perlado rojo. Precio de referencia.",
             icono: "🪗",
             foto: "fotos/acordeon-jmeister-rojo.jpg",
             destacado: true,
@@ -356,7 +356,7 @@
         return /SM58/i.test(p.nombre || "");
     });
     if (sm58) {
-        sm58.foto = "fotos/shure-sm58-caja.jpg";
+        sm58.foto = "fotos/shure-sm58.jpg";
         sm58.imagen = sm58.foto;
         sm58.precioUsd = sm58.precioUsd || 119;
     }
